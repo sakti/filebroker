@@ -6,7 +6,11 @@ import (
 	"github.com/sakti/filebroker/listener/sshd"
 )
 
+func sayHello(obj string) string {
+	return fmt.Sprintf("Hello %s", obj)
+}
+
 func main() {
-	fmt.Println("file broker")
+	fmt.Println(sayHello("file broker"))
 	sshd.Listen(2000)
 }

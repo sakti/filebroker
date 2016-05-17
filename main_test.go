@@ -2,6 +2,12 @@ package main
 
 import "testing"
 
-func TestTest(t *testing.T) {
+func TestSayHello(t *testing.T) {
+	expected := "Hello filebroker"
+	input := "filebroker"
+	result := sayHello(input)
+	if result != expected {
+		t.Errorf("Got %s; want %s", result, expected)
+	}
 
 }
